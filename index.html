@@ -18,7 +18,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="index.html">
-                    Project
+                    Project Marlin
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -56,7 +56,31 @@
                                 Комментарий успешно добавлен
                               </div>
 
-                                <div class="media">
+<!-- Эту часть надо запихнуть в цикл -->
+<!-- данные будем хранить в массиве -->
+
+<!--     Для решения, используйте только 1 массив и 1 цикл.
+    Используйте PHP в цикле, ТОЛЬКО для вывода данных из массива, а не всего блока HTML. То есть, выводите только данные, <?php echo $users['id']; ?> 
+    Используйте ассоциативный массив. Чтобы при выводе было ясно, какая информация выводится.
+    Например, <?php echo $user['username']; ?> , а не <?php echo $user[0]; ?> -->
+
+<!-- <?php
+    //Массив ассоциативный, но ключи нам не нужны:
+    $user = [
+        'John Doe'=>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe aspernatur, ullam doloremque deleniti, sequi obcaecati. , 
+        'b'=>2, 
+        'c'=>3, 
+        'd'=>4, 
+        'e'=>5];
+
+    foreach ($user as $elem) {
+        echo $elem; //выведет все комментарии пользователей: '1-й', '2-й коммент', '3-й к-т' и так далее...
+    }
+?> -->
+
+
+
+<!--                                 <div class="media">
                                   <img src="img/no-user.jpg" class="mr-3" alt="..." width="64" height="64">
                                   <div class="media-body">
                                     <h5 class="mt-0">John Doe</h5> 
@@ -65,7 +89,8 @@
                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe aspernatur, ullam doloremque deleniti, sequi obcaecati.
                                     </p>
                                   </div>
-                                </div>
+                                </div> -->
+
                             </div>
                         </div>
                     </div>
