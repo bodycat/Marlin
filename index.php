@@ -54,53 +54,56 @@
                             <div class="card-body">
                               <div class="alert alert-success" role="alert">
                                 Комментарий успешно добавлен
-                              </div>      
+                              </div>
+<!--                 <?php 
+                // Создаём ассоциативный массив/прогоним сайт в цикле
+                $users = [  1=>'Денис', 
+                            2=>'Игнат', 
+                            3=>'Владимир', 
+                            4=>'Сергей', 
+                            5=>'Илья', 
+                            6=>'Андрей', 
+                            7=>'Степан'];
+                foreach ($users as $id => $value) {
+                    echo $users[$id].'<br>';
+                }   
+                 ?> -->  
 
-
-<!-- Эту часть надо запихнуть в цикл -->
-<!-- данные будем хранить в массиве -->
-
-<!--     Для решения, используйте только 1 массив и 1 цикл.
-    Используйте PHP в цикле, ТОЛЬКО для вывода данных из массива, а не всего блока HTML. То есть, выводите только данные, <?php echo $users['id']; ?> 
-    Используйте ассоциативный массив. Чтобы при выводе было ясно, какая информация выводится.
-    Например, <?php echo $user['username']; ?> , а не <?php echo $user[0]; ?> -->
-
-<!-- числовой счётчик становится неприменим для ассоциативного массива, будем использовать     
-foreach (массив as [$key =>] $value)
-{
-   операторы
-} -->
-
-
-<!-- <?php
-    //Массив ассоциативный, но ключи нам не нужны:
-    $user = [
-        'John Doe'=>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe aspernatur, ullam doloremque deleniti, sequi obcaecati. , 
-        'b'=>2, 
-        'c'=>3, 
-        'd'=>4, 
-        'e'=>5];
-
-    foreach ($user as $elem) {
-        echo $elem; //выведет все комментарии пользователей: '1-й', '2-й коммент', '3-й к-т' и так далее...
-    }
-?> -->
-
-
-
-                                <div class="media">
+<?php 
+                // Реализация
+                $users = [  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque aliquam ratione nisi reprehenderit sequi sit neque cum molestias.'=>'Денис', 
+                            'Lorem ipsum dolor sit.'=>'Игнат', 
+                            'Lorem ipsum.'=>'Владимир', 
+                            'Lorem ipsum dolor sit.'=>'Сергей', 
+                            'Lorem ipsum dolor sit amet, consectetur.'=>'Илья', 
+                            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, nihil?'=>'Андрей', 
+                            'Lorem ipsum dolor sit amet.'=>'Степан'];
+?>                                          
+<?php foreach ($users as $id => $value) {  ?>
+                            <div class="media">
                                   <img src="img/no-user.jpg" class="mr-3" alt="..." width="64" height="64">
                                   <div class="media-body">
-                                    <h5 class="mt-0">John Doe</h5> 
+
+                                    <h5 class="mt-0">
+                                    <!-- John Doe -->
+                                    <?php echo $users[$id].'<br>'; ?>
+                                    </h5> 
                                     <span><small>12/10/2025</small></span>
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe aspernatur, ullam doloremque deleniti, sequi obcaecati.
+                                        <?php echo $id; ?>
                                     </p>
                                   </div>
                                 </div>
+<!--  -->
+<a onclick="return confirm('are you sure?');" href="delete.php?id=<?= $task['id'];?>" class="btn btn-danger">Delete</a>
+<div><br></div> 
 
+<!--  -->
 
-
+<?php } ?>            
+<!--                // btn btn-info
+                    // btn btn-warning
+                    // btn btn-danger -->
                             </div>
                         </div>
                     </div>
