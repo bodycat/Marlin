@@ -69,65 +69,38 @@
                 }   
                  ?> -->  
 
-<!-- Реализация -->
-<?php $users = [
-    ['user_image' => 'img/no-user.jpg',
-     'user_id' => '1',
-     'user_name' => 'Денис',
-     'date_comment' => '2019-12-28',
-     'user_comment' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure voluptatibus vel facere cumque consectetur, quibusdam.'],
-    ['user_image' => 'img/no-user.jpg',
-     'user_id' => '2',
-     'user_name' => 'Игнат',
-     'date_comment' => '2019-12-28',
-     'user_comment' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure voluptatibus vel facere cumque consectetur, quibusdam.'],
-    ['user_image' => 'img/no-user.jpg',
-     'user_id' => '3',
-     'user_name' => 'Владимир',
-     'date_comment' => '2019-12-28',
-     'user_comment' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure voluptatibus vel facere cumque consectetur, quibusdam.'],
-    ['user_image' => 'img/no-user.jpg',
-     'user_id' => '4',
-     'user_name' => 'Сергей',
-     'date_comment' => '2019-12-28',
-     'user_comment' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure voluptatibus vel facere cumque consectetur, quibusdam.'],
-    ['user_image' => 'img/no-user.jpg',
-     'user_id' => '5',
-     'user_name' => 'Илья',
-     'date_comment' => '2019-12-28',
-     'user_comment' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure voluptatibus vel facere cumque consectetur, quibusdam.'],
-     ['user_image' => 'img/no-user.jpg',
-     'user_id' => '6',
-     'user_name' => 'Андрей',
-     'date_comment' => '2019-12-28',
-     'user_comment' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure voluptatibus vel facere cumque consectetur, quibusdam.'],
-     ['user_image' => 'img/no-user.jpg',
-     'user_id' => '7',
-     'user_name' => 'Степан',
-     'date_comment' => '2019-12-28',
-     'user_comment' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure voluptatibus vel facere cumque consectetur, quibusdam.'],     
-];
-?>
-<!-- <?php echo $users['user_image']; ?>admin.html -->
-                <?php foreach ($users as $user) {?>
-                                <div class="media"><img src="<?php echo $user['user_image']; ?>
-" class="mr-3" alt="..." width="64" height="64">
-                                <div class="media-body">
+<?php 
+                // Реализация
+                $users = [  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque aliquam ratione nisi reprehenderit sequi sit neque cum molestias.'=>'Денис', 
+                            'Lorem ipsum dolor sit.'=>'Игнат', 
+                            'Lorem ipsum.'=>'Владимир', 
+                            'Lorem ipsum dolor sit.'=>'Сергей', 
+                            'Lorem ipsum dolor sit amet, consectetur.'=>'Илья', 
+                            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, nihil?'=>'Андрей', 
+                            'Lorem ipsum dolor sit amet.'=>'Степан'];
+?>                                          
+<?php foreach ($users as $id => $value) {  ?>
+                            <div class="media">
+                                  <img src="img/no-user.jpg" class="mr-3" alt="..." width="64" height="64">
+                                  <div class="media-body">
+
                                     <h5 class="mt-0">
-                                    <?php echo $user['user_id'].'<br>';?>
+                                    <?php echo $users[$id].'<br>'; ?>
                                     </h5> 
-                                    <span><small><?php echo $user['user_comment'].'<br>';?>
-                                    </small></span>
+                                    <span><small>12/10/2025</small></span>
                                     <p>
-                                        <?php echo $user['user_name']; ?>
+                                        <?php echo $id; ?>
                                     </p>
                                   </div>
-
                                 </div>
-                                <a onclick="return confirm('Уверены?');" href="edit.php?id=<?= $task['id'];?>" class="btn btn-secondary">Правка</a>
-                                <a onclick="return confirm('Уверены?');" href="delete.php?id=<?= $task['id'];?>" class="btn btn-danger">Удалить</a>
-                                <div><br></div>
-                <?php } ?>
+<!--  -->
+<a onclick="return confirm('Уверены?');" href="edit.php?id=<?= $task['id'];?>" class="btn btn-secondary">Правка</a>
+<a onclick="return confirm('Уверены?');" href="delete.php?id=<?= $task['id'];?>" class="btn btn-danger">Удалить</a>
+<div><br></div> 
+
+<!--  -->
+
+<?php } ?>            
 
 <!-- <button type="button" class="btn btn-primary">Primary</button>
 <button type="button" class="btn btn-secondary">Secondary</button>
@@ -140,8 +113,8 @@
 
                             </div>
                         </div>
-                    </div>    
-
+                    </div>
+                
                     <div class="col-md-12" style="margin-top: 20px;">
                         <div class="card">
                             <div class="card-header"><h3>Оставить комментарий</h3></div>
