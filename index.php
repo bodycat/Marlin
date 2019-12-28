@@ -55,88 +55,66 @@
                               <div class="alert alert-success" role="alert">
                                 Комментарий успешно добавлен
                               </div>
-<!--                 <?php 
-                // Создаём ассоциативный массив/прогоним сайт в цикле
-                $users = [  1=>'Денис', 
-                            2=>'Игнат', 
-                            3=>'Владимир', 
-                            4=>'Сергей', 
-                            5=>'Илья', 
-                            6=>'Андрей', 
-                            7=>'Степан'];
-                foreach ($users as $id => $value) {
-                    echo $users[$id].'<br>';
-                }   
-                 ?> -->  
-
 <!-- Реализация -->
 <?php $users = [
-    ['user_image' => 'img/no-user.jpg',
+    ['user_image' => 'https://im0-tub-ru.yandex.net/i?id=f288a4c01a2af5b5f520642dc3047aeb&n=13&exp=1',
      'user_id' => '1',
      'user_name' => 'Денис',
      'date_comment' => '2019-12-28',
      'user_comment' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure voluptatibus vel facere cumque consectetur, quibusdam.'],
-    ['user_image' => 'img/no-user.jpg',
+    ['user_image' => 'https://pickaface.net/gallery/avatar/NexusQuote51dc0a7c1f639.png',
      'user_id' => '2',
      'user_name' => 'Игнат',
      'date_comment' => '2019-12-28',
      'user_comment' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure voluptatibus vel facere cumque consectetur, quibusdam.'],
-    ['user_image' => 'img/no-user.jpg',
+    ['user_image' => 'https://im0-tub-ru.yandex.net/i?id=19127c363dc4359f7a3dedeed901c7e1&n=13&exp=1',
      'user_id' => '3',
      'user_name' => 'Владимир',
      'date_comment' => '2019-12-28',
      'user_comment' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure voluptatibus vel facere cumque consectetur, quibusdam.'],
-    ['user_image' => 'img/no-user.jpg',
+    ['user_image' => 'https://im0-tub-ru.yandex.net/i?id=c82e6984d4035095dc6de3d2200900a4&n=13&exp=1',
      'user_id' => '4',
      'user_name' => 'Сергей',
      'date_comment' => '2019-12-28',
      'user_comment' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure voluptatibus vel facere cumque consectetur, quibusdam.'],
-    ['user_image' => 'img/no-user.jpg',
+    ['user_image' => 'https://im0-tub-ru.yandex.net/i?id=144b39b7309a1b78b6ff216db65fea89&n=13&exp=1',
      'user_id' => '5',
      'user_name' => 'Илья',
      'date_comment' => '2019-12-28',
      'user_comment' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure voluptatibus vel facere cumque consectetur, quibusdam.'],
-     ['user_image' => 'img/no-user.jpg',
+     ['user_image' => 'https://im0-tub-ru.yandex.net/i?id=297fb3d0d24bd96c311f6627dac0714f&n=13&exp=1',
      'user_id' => '6',
      'user_name' => 'Андрей',
      'date_comment' => '2019-12-28',
      'user_comment' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure voluptatibus vel facere cumque consectetur, quibusdam.'],
      ['user_image' => 'img/no-user.jpg',
      'user_id' => '7',
-     'user_name' => 'Степан',
+     'user_name' => 'Anonymous',
      'date_comment' => '2019-12-28',
      'user_comment' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure voluptatibus vel facere cumque consectetur, quibusdam.'],     
 ];
 ?>
-<!-- <?php echo $users['user_image']; ?>admin.html -->
                 <?php foreach ($users as $user) {?>
                                 <div class="media"><img src="<?php echo $user['user_image']; ?>
-" class="mr-3" alt="..." width="64" height="64">
+" class="mr-3" alt="..." width="64" height="64" title=" 
+                                                        <?php echo 'ID пользователя: '.$user['user_id']; ?>
+                                                    ">
                                 <div class="media-body">
                                     <h5 class="mt-0">
-                                    <?php echo $user['user_id'].'<br>';?>
+                                    <?php echo $user['user_name'].'<br>';?>
                                     </h5> 
-                                    <span><small><?php echo $user['user_comment'].'<br>';?>
+                                    <span><small><?php echo $user['date_comment'].'<br>';?>
                                     </small></span>
                                     <p>
-                                        <?php echo $user['user_name']; ?>
+                                        <?php echo $user['user_comment']; ?>
                                     </p>
                                   </div>
 
                                 </div>
-                                <a onclick="return confirm('Уверены?');" href="edit.php?id=<?= $task['id'];?>" class="btn btn-secondary">Правка</a>
-                                <a onclick="return confirm('Уверены?');" href="delete.php?id=<?= $task['id'];?>" class="btn btn-danger">Удалить</a>
+                                <a onclick="return confirm('Уверены?');" href="edit.php?id=<?= $task['id'];?>" class="btn btn-warning">Edit</a>
+                                <a onclick="return confirm('Уверены?');" href="delete.php?id=<?= $task['id'];?>" class="btn btn-danger">Delete</a>
                                 <div><br></div>
                 <?php } ?>
-
-<!-- <button type="button" class="btn btn-primary">Primary</button>
-<button type="button" class="btn btn-secondary">Secondary</button>
-<button type="button" class="btn btn-success">Success</button>
-<button type="button" class="btn btn-danger">Danger</button>
-<button type="button" class="btn btn-warning">Warning</button>
-<button type="button" class="btn btn-info">Info</button>
-<button type="button" class="btn btn-light">Light</button>
-<button type="button" class="btn btn-dark">Dark</button> -->
 
                             </div>
                         </div>
@@ -167,3 +145,13 @@
     </div>
 </body>
 </html>
+
+
+<!-- <button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-light">Light</button>
+<button type="button" class="btn btn-dark">Dark</button> -->
